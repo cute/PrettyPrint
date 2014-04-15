@@ -1,27 +1,27 @@
 {
-  "name": "PrettyPrint",
-  "icons": {
-    "16": "icon_16.png",
-    "48": "icon_48.png", 
-    "128": "icon_128.png"
-  },
-  "version": "0.0.25",
-  "description": "JavaScript and CSS formatter/syntax highlighter",
-  "content_scripts": [{
-    "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
-    "js": [ "bootstrap.js" ],
-    "run_at" : "document_end"
-  }, {
-    "matches": [ "file:///*" ],
-    "js": [ "content.js", "bootstrap.js" ],
-    "run_at" : "document_end"
-  }],
-  "background": {
-    "scripts": [
-      "background.js"	      
-    ]
-  },
-  "options_page": "options.html",
-  "permissions": [ "contextMenus", "tabs", "http://*/",  "https://*/", "ftp://*/" ],
-  "manifest_version": 2
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "bootstrap.js" ],
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "content.js", "bootstrap.js" ],
+      "matches": [ "file:///*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "JavaScript and CSS formatter/syntax highlighter",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDaAvtQ32F23oGGfEBoHTSZShDd5JurzDvYLaEqOLpPVMU3usIDi2NZu5izftUeZtdmrh6oh4y97JcQffcq2bNW7bP4G+1oTwxolppDxQPwEFBM3IlT0jW/QdoNLpPPSAoOeIiTLX8r1iiqyXCuJW9MQZF1dq2OsoEb8/0KLio+GwIDAQAB",
+   "manifest_version": 2,
+   "name": "PrettyPrint",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "tabs", "http://*/", "https://*/", "ftp://*/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.0.26"
 }

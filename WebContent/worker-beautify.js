@@ -1,7 +1,7 @@
 /*
  * Copyright 2011 Gildas Lormeau
  * contact : gildas.lormeau <at> gmail.com
- * 
+ *
  * This file is part of PrettyPrint.
  *
  *   PrettyPrint is free software: you can redistribute it and/or modify
@@ -20,5 +20,5 @@
 
 importScripts('beautify.js');
 addEventListener("message", function(event) {
-	postMessage(js_beautify(event.data.text, event.data.options));
+    postMessage(js_beautify(event.data.text, event.data.options));
 }, false);

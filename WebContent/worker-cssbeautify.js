@@ -1,7 +1,7 @@
 /*
  * Copyright 2011 Gildas Lormeau
  * contact : gildas.lormeau <at> gmail.com
- * 
+ *
  * This file is part of PrettyPrint.
  *
  *   PrettyPrint is free software: you can redistribute it and/or modify
@@ -21,11 +21,11 @@
 importScripts('cssbeautify.js');
 
 addEventListener("message", function(event) {
-	var options = event.data.options, i, indent = "";
-	for (i = 0; i < options.css_indent_size; i++)
-		indent += options.css_indent_char;
-	postMessage(cssbeautify(event.data.text, {
-		indent : indent,
-		openbrace : options.css_braces_on_own_line ? "separate-line" : "end-of-line"
-	}));
+    var options = event.data.options, i, indent = "";
+    for (i = 0; i < options.css_indent_size; i++)
+        indent += options.css_indent_char;
+    postMessage(cssbeautify(event.data.text, {
+        indent : indent,
+        openbrace : options.css_braces_on_own_line ? "separate-line" : "end-of-line"
+    }));
 }, false);

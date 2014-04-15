@@ -1,7 +1,7 @@
 /*
  * Copyright 2011 Gildas Lormeau
  * contact : gildas.lormeau <at> gmail.com
- * 
+ *
  * This file is part of PrettyPrint.
  *
  *   PrettyPrint is free software: you can redistribute it and/or modify
@@ -20,5 +20,5 @@
 
 importScripts('WebInspector.js');
 addEventListener("message", function(event) {
-	postMessage(new WebInspector.DOMSyntaxHighlighter(event.data.type).syntaxHighlightNode(event.data.text));
+    postMessage(new WebInspector.DOMSyntaxHighlighter(event.data.type).syntaxHighlightNode(event.data.text));
 }, false);

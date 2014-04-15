@@ -1,7 +1,7 @@
 /*
  * Copyright 2011 Gildas Lormeau
  * contact : gildas.lormeau <at> gmail.com
- * 
+ *
  * This file is part of PrettyPrint.
  *
  *   PrettyPrint is free software: you can redistribute it and/or modify
@@ -20,15 +20,17 @@
 
 var options;
 
-if (document.location.pathname.substr(-4) == ".css" || document.location.pathname.substr(-3) == ".js") {
-	chrome.extension.onMessage.addListener(function(response) {
-		if (response.options) {
-			options = response.options;
-			if (document.location.protocol == "file:")
-				process();
-		}
-	});
-	chrome.extension.sendMessage({
-		getOptions : true
-	});	
+if (document.location.pathname.substr(-4) == ".css"
+    || document.location.pathname.substr(-3) == ".js") {
+    chrome.extension.onMessage.addListener(function(response) {
+        if (response.options) {
+            options = response.options;
+            if (document.location.protocol == "file:"){
+                process();
+            }
+        }
+    });
+    chrome.extension.sendMessage({
+        getOptions : true
+    });
 }
